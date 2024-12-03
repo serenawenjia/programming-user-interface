@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Red Hat Display"', "sans-serif"], 
+            },
+            fontSize: {
+              pageTitle: ["54px", 1],
+            },
+            colors: {
+              background: "#FFFFFF", 
+              primaryText: "#000000", 
+              titleText: "#6B7280", 
+              tag: "#10B981", // Tag color (green) --> change this later, not passing AA & AAA rn
+            },
+            gridTemplateColumns: {
+              16: "repeat(16, minmax(0, 1fr))",
+            },
+            gridColumn: {
+              "span-14": "span 14 / span 14",
+              "span-16": "span 16 / span 16",
+            },
+            spacing: {
+              30: "120px",
+              50: "200px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-text {
+        background: linear-gradient(to bottom, #e2edfd, #2fbf2d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-primaryText font-display text-lg">
+    <!-- Top Navigation -->
+    <nav
+      class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-md z-10 rounded-full px-4 py-2"
+    >
+      <div class="flex gap-4">
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#93cc09] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            Work
+            <div
+              class="absolute h-1 bg-[#93cc09] left-1/2 transform -translate-x-1/2 w-[calc(100%+10px)]"
+            ></div>
+          </span>
+        </a>
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#ffbf1f] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            About
+          </span>
+        </a>
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#00a8d0] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            Resume
+          </span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Page Title -->
+    <div class="grid grid-cols-16 gap-4">
+      <div class="col-span-2"></div>
+      <div class="col-span-12 text-center pt-50 pb-30 flex flex-col gap-10">
+        <h1 class="text-pageTitle font-medium">
+          Hi! I'm <span class="gradient-text">Serena</span>
+          <br />
+          a multidisciplinary UX designer solving problems through a scalable
+          and human-centric approach.
+        </h1>
+        <h2 class="mt-10">
+          UX Designer at dx center | M.S. HCI from Pratt Institute
+        </h2>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-2"></div>
+      <div class="col-span-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a
+          href="template.html"
+          aria-label="Card Title 1"
+          class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="Image/SAM.png"
+            alt="Card Image"
+            class="w-full"
+          />
+          <div class="p-4">
+            <h2 class="text-xl text-primaryText">Card Title 1</h2>
+            <div class="flex space-x-2 mt-2">
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag1</span
+              >
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag2</span
+              >
+            </div>
+          </div>
+        </a>
+        <a
+          href="template.html"
+          aria-label="Card Title 2"
+          class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="Image/toyota.png"
+            alt="Card Image"
+            class="w-full"
+          />
+          <div class="p-4">
+            <h2 class="text-xl text-primaryText">Card Title 2</h2>
+            <div class="flex space-x-2 mt-2">
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag1</span
+              >
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag2</span
+              >
+            </div>
+          </div>
+        </a>
+        <a
+          href="template.html"
+          aria-label="Card Title 3"
+          class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="Image/ICI.png"
+            alt="Card Image"
+            class="w-full"
+          />
+          <div class="p-4">
+            <h2 class="text-xl text-primaryText">Card Title 3</h2>
+            <div class="flex space-x-2 mt-2">
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag1</span
+              >
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag2</span
+              >
+            </div>
+          </div>
+        </a>
+        <a
+          href="template.html"
+          aria-label="Card Title 4"
+          class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="Image/prattconnect.png"
+            alt="Card Image"
+            class="w-full"
+          />
+          <div class="p-4">
+            <h2 class="text-xl text-primaryText">Card Title 4</h2>
+            <div class="flex space-x-2 mt-2">
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag1</span
+              >
+              <span
+                class="border border-tag text-tag py-1 px-2 rounded-full text-xs font-light"
+                >Tag2</span
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 p-4 grid grid-cols-16 gap-4">
+      <div class="col-span-2"></div>
+      <div class="col-span-12 text-left">
+        <div class="flex items-center mb-2">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="text-primaryText hover:text-gray-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 8a6 6 0 11-12 0 6 6 0 0112 0zM8 8v12M8 8h8M8 8v12"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm text-titleText">© 2024 Serena L. • Based in NYC</p>
+      </div>
+      <div class="col-span-2"></div>
+    </footer>
+  </body>
+</html>

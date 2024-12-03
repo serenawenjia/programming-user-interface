@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Red Hat Display"', "sans-serif"], 
+            },
+            fontSize: {
+              pageTitle: ["54px", 1],
+            },
+            colors: {
+              background: "#FFFFFF", 
+              primaryText: "#000000", 
+              titleText: "#6B7280",
+              tag: "#10B981", 
+            },
+            gridTemplateColumns: {
+              16: "repeat(16, minmax(0, 1fr))",
+            },
+            gridColumn: {
+              "span-14": "span 14 / span 14",
+              "span-16": "span 16 / span 16",
+            },
+            spacing: {
+              30: "120px",
+              50: "200px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-text {
+        background: linear-gradient(to bottom, #e2edfd, #2fbf2d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-primaryText text-lg">
+    <!-- Top Navigation -->
+    <nav
+      class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-md z-10 rounded-full px-4 py-2"
+    >
+      <div class="flex gap-4">
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#93cc09] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            Work
+            <div
+              class="absolute h-1 bg-[#93cc09] left-1/2 transform -translate-x-1/2 w-[calc(100%+10px)]"
+            ></div>
+          </span>
+        </a>
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#ffbf1f] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            About
+          </span>
+        </a>
+        <a href="#" class="relative py-2 px-4 uppercase overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-[#00a8d0] rounded-full transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+          ></span>
+          <span
+            class="text-sm font-light relative text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+          >
+            Resume
+          </span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- 12 Column Image -->
+    <div class="grid grid-cols-16 gap-4">
+      <div class="col-span-2"></div>
+      <div class="col-span-12">
+        <img
+          src="https://via.placeholder.com/1200x600"
+          alt="Main Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <!-- Page Title and Subtitle -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-2"></div>
+      <div class="col-span-12 text-left">
+        <h1 class="text-4xl font-bold mb-2">Case Study Title</h1>
+        <h2 class="text-xl text-titleText">Subtitle of the Case Study</h2>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <!-- My Role, Team, Tools -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-2"></div>
+      <div class="col-span-5">
+        <h3 class="text-2xl font-semibold">My Role</h3>
+        <p>My role description goes here.</p>
+      </div>
+      <div class="col-span-4">
+        <h3 class="text-2xl font-semibold mt-4">Team</h3>
+        <p>Team description goes here.</p>
+      </div>
+      <div class="col-span-3">
+        <h3 class="text-2xl font-semibold mt-4">Tools</h3>
+        <p>Tools description goes here.</p>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <!-- 16 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-16">
+        <img
+          src="https://via.placeholder.com/1200x400"
+          alt="Full Width Image"
+          class="w-full"
+        />
+      </div>
+    </div>
+
+    <!-- Context - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <h3 class="text-2xl font-semibold text-titleText">Context</h3>
+        <div class="grid grid-cols-16 gap-4 mt-2">
+          <div class="col-span-8">
+            <p class="font-bold">Context Title</p>
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Context Image"
+              class="w-full"
+            />
+          </div>
+          <div class="col-span-8">
+            <p>First context section description goes here.</p>
+            <p>Second context section description goes here.</p>
+            <p>Third context section description goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- 10 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-3"></div>
+      <div class="col-span-10">
+        <img
+          src="https://via.placeholder.com/800x400"
+          alt="Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-3"></div>
+    </div>
+
+    <!-- Research - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <h3 class="text-2xl font-semibold text-titleText">Research</h3>
+        <div class="grid grid-cols-16 gap-4 mt-2">
+          <div class="col-span-8">
+            <p class="font-bold">Research Title</p>
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Research Image"
+              class="w-full"
+            />
+          </div>
+          <div class="col-span-8">
+            <p>Research description part 1 goes here.</p>
+            <p>Research description part 2 goes here.</p>
+            <p>Research description part 3 goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Problem - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <h3 class="text-2xl font-semibold text-titleText">Problem</h3>
+        <div class="grid grid-cols-16 gap-4 mt-2">
+          <div class="col-span-5">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Problem Image"
+              class="w-full"
+            />
+            <p class="font-bold">Problem Section 1</p>
+            <p>First problem section description.</p>
+          </div>
+          <div class="col-span-5">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Problem Image"
+              class="w-full"
+            />
+            <p class="font-bold">Problem Section 2</p>
+            <p>Second problem section description.</p>
+          </div>
+          <div class="col-span-5">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Problem Image"
+              class="w-full"
+            />
+            <p class="font-bold">Problem Section 3</p>
+            <p>Third problem section description.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- 6 Column Card -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-5"></div>
+      <div class="col-span-6">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h4 class="font-semibold text-titleText">Card Title</h4>
+          <p class="text-titleText">Card description goes here.</p>
+        </div>
+      </div>
+      <div class="col-span-5"></div>
+    </div>
+
+    <!-- 16 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-16">
+        <img
+          src="https://via.placeholder.com/1200x400"
+          alt="Full Width Image"
+          class="w-full"
+        />
+      </div>
+    </div>
+
+    <!-- Goal - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <div class="grid grid-cols-2 gap-4 mt-2">
+          <div class="col-span-1">
+            <h3 class="text-3xl font-bold text-titleText">Goal</h3>
+            <h4 class="text-3xl font-bold text-black">Goal Subtitle</h4>
+          </div>
+          <div class="col-span-1">
+            <p class="">Goal section description.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Prioritize - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <div class="grid grid-cols-2 gap-4 mt-2">
+          <div class="col-span-1">
+            <h3 class="text-3xl font-bold text-titleText">Prioritize</h3>
+            <h4 class="text-3xl font-bold text-black">Prioritize Subtitle</h4>
+          </div>
+          <div class="col-span-1">
+            <p class="">Prioritize section description.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- 16 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-16">
+        <img
+          src="https://via.placeholder.com/1200x400"
+          alt="Full Width Image"
+          class="w-full"
+        />
+      </div>
+    </div>
+
+    <!-- Design Solution - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <h3 class="text-3xl font-semibold text-titleText">Design Solution</h3>
+        <p class="">Description of the design solution goes here.</p>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- 16 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-16">
+        <img
+          src="https://via.placeholder.com/1200x400"
+          alt="Full Width Image"
+          class="w-full"
+        />
+      </div>
+    </div>
+
+    <!-- Accessibility - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-4">
+        <h3 class="text-3xl font-semibold text-titleText">1 - Accessibility</h3>
+        <p class="">Details about accessibility.</p>
+      </div>
+      <div class="col-span-4">
+        <img
+          src="https://via.placeholder.com/400x300"
+          alt="Accessibility Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Why icons? - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-4">
+        <h3 class="text-3xl font-semibold text-titleText">2 - Why icons?</h3>
+        <p class="">Details about icon usage.</p>
+      </div>
+      <div class="col-span-4">
+        <img
+          src="https://via.placeholder.com/400x300"
+          alt="Icon Usage Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Form Design - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-4">
+        <h3 class="text-3xl font-semibold text-titleText">3 - Form Design</h3>
+        <p class="">Details about the form design.</p>
+      </div>
+      <div class="col-span-4">
+        <img
+          src="https://via.placeholder.com/400x300"
+          alt="Form Design Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- 16 Column Image -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-16">
+        <img
+          src="https://via.placeholder.com/1200x400"
+          alt="Full Width Image"
+          class="w-full"
+        />
+      </div>
+    </div>
+
+    <!-- Testing - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-8 text-left">
+        <h3 class="text-3xl font-semibold text-titleText">Testing</h3>
+        <div class="grid grid-cols-3 gap-4 mt-2">
+          <div class="col-span-1">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Testing Image"
+              class="w-full"
+            />
+            <p class="font-bold">Test Case 1</p>
+            <p class="">Description of test case 1.</p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Testing Image"
+              class="w-full"
+            />
+            <p class="font-bold">Test Case 2</p>
+            <p class="">Description of test case 2.</p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Testing Image"
+              class="w-full"
+            />
+            <p class="font-bold">Test Case 3</p>
+            <p class="">Description of test case 3.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Results - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-4">
+        <h3 class="text-3xl font-semibold text-titleText">Results</h3>
+        <p class="text-3xl font-semibold">Results description line 1.</p>
+        <p class="text-3xl font-semibold">Results description line 2.</p>
+        <p class="text-3xl font-semibold">Results description line 3.</p>
+        <p class="text-3xl font-semibold">Results description line 4.</p>
+      </div>
+      <div class="col-span-4">
+        <img
+          src="https://via.placeholder.com/400x300"
+          alt="Results Image"
+          class="w-full"
+        />
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+
+    <!-- Reflection - 8 Column Section -->
+    <div class="grid grid-cols-16 gap-4 mt-8">
+      <div class="col-span-4"></div>
+      <div class="col-span-4">
+        <h3 class="text-3xl font-semibold text-titleText">Reflection</h3>
+        <p class="">Reflection part 1 description.</p>
+      </div>
+      <div class="col-span-4">
+        <div class="mt-4">
+          <h4 class="font-bold">Reflection Part 1</h4>
+          <p class="">Details about reflection part 1.</p>
+        </div>
+        <div class="mt-4">
+          <h4 class="font-bold">Reflection Part 2</h4>
+          <p class="">Details about reflection part 2.</p>
+        </div>
+        <div class="mt-4">
+          <h4 class="font-bold">Reflection Part 3</h4>
+          <p class="">Details about reflection part 3.</p>
+        </div>
+      </div>
+      <div class="col-span-4"></div>
+    </div>
+  </body>
+</html>
